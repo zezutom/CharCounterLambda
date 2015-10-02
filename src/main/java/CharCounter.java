@@ -23,8 +23,7 @@ public class CharCounter {
 		}
 	}
 	
-	public List<Count> count(String text) {
-		
+	public List<Count> count(String text) {		
 		return text
 				.toLowerCase()
 				.chars()
@@ -40,6 +39,9 @@ public class CharCounter {
 	
 	}
 	public static void main(String[] args) {
-		System.out.println(new CharCounter().count("Hello World!"));		
+		new CharCounter()
+			.count("Imagination is more important than knowledge. [Albert Einstein]")
+			.stream()
+			.forEach(System.out::println);		
 	}
 }
